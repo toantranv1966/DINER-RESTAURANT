@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diner Restaurant</title>
-
+    <title>Curtain Menu</title>
     <!-- FONT GOOGLE -->
+    <link href="//fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&display=swap" rel="stylesheet">
-
+    
     <!-- FONT AWSOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -25,90 +28,218 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body>
+<body id="myBody">
 
-    <!-- PHÂN CÔNG LÀM BÀI TẬP NHÓM 1 -->
+  <!-- PHÂN CÔNG LÀM BÀI TẬP NHÓM 1 -->
 
-    <!-- I. Toàn: 1+2+3 -->
+  <!-- I. Toàn: 1+2+3 -->
 
-    <!-- 1. Header + design button bên phải (Back, Download, Buy) -->
-    <!-- 2. Carousel (The only thing we love more than food is you!) -->
-    <!-- 3. About us -->
+  <!-- 1. Header + design button bên phải (Back, Download, Buy) -->
+  <!-- 2. Carousel (The only thing we love more than food is you!) -->
+  <!-- 3. About us -->
 
-    <!-- II/ Tuấn: 4+5+6+7 -->
-    <!-- 4. Restaurants (More than 3000 restaurant) -->
-    <!-- 5. Categories (Popular categories) -->
-    <!-- 6. Menu (Soup, Drinks, Pizza, Breakfast, Lunch, Dinner) -->
-    <!-- 7. Statistics (Deliciousness jumping into the mouth (bao gồm phần số)) -->
+  <!-- II/ Tuấn: 4+5+6+7 -->
+  <!-- 4. Restaurants (More than 3000 restaurant) -->
+  <!-- 5. Categories (Popular categories) -->
+  <!-- 6. Menu (Soup, Drinks, Pizza, Breakfast, Lunch, Dinner) -->
+  <!-- 7. Statistics (Deliciousness jumping into the mouth (bao gồm phần số)) -->
 
-    <!-- III/ Thoa : 8+9+10+11 -->
-    <!-- 8. Video -->
-    <!-- 9. Blog (Blog posts) -->
-    <!-- 10. Comment (What people say) -->
-    <!-- 11. Footer (button back to top) -->
+  <!-- III/ Thoa : 8+9+10+11 -->
+  <!-- 8. Video -->
+  <!-- 9. Blog (Blog posts) -->
+  <!-- 10. Comment (What people say) -->
+  <!-- 11. Footer (button back to top) -->
 
-    <!-- 1. HEADER -->
+  <!-- 1. HEADER + 2. CAROUSEL -->
 
-    <header></header>
+  <header class="header-carousel">
+    <div class="container">
+        <div class="header__navbar">
+            <div class="navbar__brand">
+                <h1><a class="logo-brand" href="#">Diner </a></h1>
+            </div>
+            <div class="navbar__right-content">
+                <div class="search-bar" style="display: flex;">
+                    <!-- Search right -->
+                    <form class="search position-relative">
+                        <input type="search" class="search__input" placeholder="Search here">
+                        <span class="fa fa-search search__icon"></span>
+                        <!-- <span class="fa fa-search search__icon"></span> -->
+                    </form>
+                    <!-- End Search right -->
+                </div>
+                <div class="theme-menu">
 
-    <!-- END HEADER -->
+                    <!-- toggle switch for light and dark theme -->
+                    <div class="mobile-position">
+                        <nav class="navigation">
+                            <div class="theme-switch-wrapper">
+                                <button class="btn" id="switchButton" title="Click to switch theme">
+                                    <div class="mode-container">
+                                        <i class="far fa-moon"></i>
+                                        <i class="far fa-sun"></i>
+                                        <!-- <i class="gg-sun"></i>
+                                        <i class="gg-moon"></i> -->
+                                    </div>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
 
-    <!-- 2. CAROUSEL -->
+                <!-- The overlay -->
+                <div id="myNav" class="overlay text-center">
 
-    <section class="carousel"></section>
+                    <!-- Button to close the overlay navigation -->
+                    <button class="overlay-close"></button>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <!-- Overlay content -->
+                    <div class="overlay-content">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">404</a></li>
+                        <li><a href="#">Landing Page</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shot Codes</a></li>
+                        <li><a href="#">Email</a></li>
+                    </div>
+                </div>
+
+                <!-- Use any element to open/show the overlay navigation menu -->
+
+                <span class="check-btn" onclick="openNav()"><i class="fa fa-bars" style="font-size: 30px;
+                    color: white;
+                    line-height: 80px;
+                    float: right;
+                    margin-right: 40px;
+                    cursor: pointer;"></i></span>
+
+            </div>
+
+            <div class="header-carousel__info">
+                <h3 class="mb-4">The only thing we love more than food is you!</h3>
+                <!-- <div class="separatorhny"></div> -->
+                <p class="pr-lg-5 mt-md-4 mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi
+                    vitae sit.Ea
+                    ipsum sed consequuntur illum facere.
+                </p>
+                <a class="btn btn-white mt-sm-5 mt-4 mr-2" href="#">
+                    Read More <span class="fa fa-chevron-right ml-2" aria-hidden="true"></span></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- END HEADER + CAROUSEL -->
+
+<!-- 3. ABOUT US -->
+
+<section class="aboutus py-5">
+    <div class="container py-md-5">
+        <div class="row">
+            <div class="col-lg-5 content-left">
+                <div class="header-title">
+                    <h6 class="">About Us</h6>
+                    <h3 class="mb-4">We found our creative space that is open for you.</h3>
+                </div>
+            </div>
+            <div class="col-lg-7 content-right pl-lg-5 mt-lg-0 mt-3">
+                <p class="">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper
+                    at
+                    tempufddfel. Lorem ipsum dolor sit amet elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit
+                    amet. Lorem
+                    ipsum init dolor sit, amet elit. Dolor ipsum non velit, culpa!Lorem ipsum init dolor sit.</p>
+                <p class="mt-3">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula.
+                    Semper at
+                    tempufddfel. Lorem ipsum dolor sit amet elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit
+                    amet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- END ABOUT US -->
+
+  <!-- 4. RESTAURANT -->
+
+  <!-- END RESTAURANT -->
+
+  <!-- 5. CATEGORIES -->
+
+  <!-- END CATEGORIES -->
+
+  <!-- 6. MENU -->
 
 
-    <!-- END CAROUSEL -->
-
-    <!-- 3. ABOUT US -->
-
-    <section class="aboutus"></section>
+  <!-- END MENU -->
 
 
-    <!-- END ABOUT US -->
+  <!-- 7. STATISTICS -->
 
-    <!-- 4. RESTAURANT -->
+  <!-- END STATISTICS -->
 
-    <!-- END RESTAURANT -->
+  <!-- 8. VIDEO -->
 
-    <!-- 5. CATEGORIES -->
+  <!-- END VIDEO -->
 
-    <!-- END CATEGORIES -->
+  <!-- 9. BLOG -->
 
-    <!-- 6. MENU -->
+  <!-- END BLOG -->
 
+  <!-- 10. COMMENT -->
 
-    <!-- END MENU -->
+  <!-- END COMMENT -->
 
-
-    <!-- 7. STATISTICS -->
-
-    <!-- END STATISTICS -->
-
-    <!-- 8. VIDEO -->
-
-    <!-- END VIDEO -->
-
-    <!-- 9. BLOG -->
-
-    <!-- END BLOG -->
-
-    <!-- 10. COMMENT -->
-
-    <!-- END COMMENT -->
-
-    <!-- 11. FOOTER -->
+  <!-- 11. FOOTER -->
 
 
-    <!-- BOOTRAP 4.6 -->
+<!-- BOOTRAP 4.6 -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+<!-- The overlay -->
+<script>
+    /* Open when someone clicks on the span element */
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+<!-- Dark and Light theme switcher -->
+
+<script>
+    /**
+Solution: 
+Khi click vào nút moon 🌙 , thẻ body sẽ được thêm class dark.
+Dựa vào class dark, ta viết css dành riêng cho dark theme.
+
+Ngược lại, khi click vào nút sun ☀️, ta sẽ xóa class dark để css light theme hiện lại
+
+*/
+    //gọi thẻ button có id là switchButton
+    // gắn chức năng click cho switchButton
+    document.getElementById("switchButton").onclick = function () {
+        //khi button được click thì tìm đến thẻ body có id là myBody
+        // dùng classlist để gọi thuộc tính class của thẻ body
+        //Sử dụng toggle() để thêm hoặc xóa 1 class của thẻ html. Nếu thẻ body không có class dark thì toggle sẽ thêm class dark vào body. Ngược lại, nếu thẻ body đang có class dark thì toogle sẽ xóa class dark đi.
+        document.getElementById("myBody").classList.toggle("dark");
+    };
+</script>
 
 </body>
 
