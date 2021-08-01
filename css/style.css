@@ -1,136 +1,7 @@
 /* GLOBAL */
-
-/* body,
-html {
-  margin: 0;
-  padding: 0;
-  background: var(--bg-color);
-  color: var(--font-color);
-  font-family: 'Quicksand', sans-serif;
-}
-
-[data-theme="dark"] {
-  --primary-color: #ff6600;
-  --secondary-color: #ffc600;
-  --font-color: #c2d0da;
-  --bg-color: #232220;
-  --heading-color: #eee;
-  --border-color: rgba(255, 255, 255, 0.2);
-  --border-color-light: rgba(255, 255, 255, 0.1);
-  --nav-color: #fff;
-  --dropdown-color: #121725;
-  --iframe-filter: grayscale(100%);
-  --bg-light: #282828;
-  --bg-grey: #282828;
-  --card-bg: #888c96;
-  --footer-bg: #000;
-} */
-
 * {
-    box-sizing: border-box;
-    font-family: -apple-systecolm, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  }
-a, a:hover{
-    text-decoration: none;
-}
-p{
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  line-height: 28px;
-  font-family: 'Quicksand', sans-serif;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  color: #232121;
-  font-family: 'Quicksand', sans-serif;
-}
-.title{
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 1px;
-  display: block;
-  color: #ff6600;
-  font-family: 'Pacifico', cursive;
-}
-.subtit{
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 600;
-}
-
-/* RESTAURANT */
-.rest{
-  background-color: #ff6600;
-  display: block;
-}
-.rest_img{
-  background: url(../img/banner3.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 700px;
-}
-.rest_text .title{
-  color: white;
-}
-.rest_content{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-}
-.rest .icon{
-  background-color: white;
-}
-.icon{
-
-  width: 70px;
-  height: 70px;
-  text-align: center;
-  line-height: 70px;
-  border-radius: 6px;
-  transition: 0.3s ease-in-out;
-}
-.icon .fa{
-  color: #ff6600;
-  font-size: 25px;
-  line-height: 70px;
-}
-.rest_hov:hover .icon span.fa{
-  color: #ffc600;
-  transition: 0.3s ease-in-out;
-}
-.rest_click{
-  display: block;
-  color: #232121;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-.rest_click:hover{
-  opacity: 0.9;
-  color: #232121;
-}
-.rest_hov p{
-  color: #ffdfc9;
-}
-
-/* CATEGORIES */
-.cat-img{
-  position: relative;
-}
-.cat-img::after{
-
-}
-.cat_price{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 40%;
-}
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -153,13 +24,6 @@ h1, h2, h3, h4, h5, h6 {
             align-items: center;
       }
   
-      .navbar__brand h1 {
-        margin: 0;
-        padding: 0;
-        color: var(--heading-color);
-        font-family: 'Quicksand', sans-serif;
-    }
-  
     .navbar__brand h1 a.logo-brand {
         text-decoration: none;
         margin: 0;
@@ -168,7 +32,6 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
         color: #fff;
     }
-  
   
       .navbar__right-content{
         display: grid;
@@ -203,8 +66,10 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer;
     }
 
+}
 
-/*-- //toggle switch --*/
+    /* END BANNER + HEADER */
+
 /*-- dark and light mode styling --*/
 
 .theme-switch-wrapper {
@@ -324,33 +189,30 @@ display: none;
 background: #232220;;
 }
 #switchButton {
-background-color: white;
+background-color: transparent;
 }
-#switchButton .fa-sun {
-display: none;
+
+#switchButton .gg-sun{
+  display: none;
 }
-#switchButton .fa-moon {
-display: block;
+
+#switchButton .gg-moon{
+  color:white;
+  display: block;
 }
 
 /* Dark Theme*/
 .dark#myBody{
 background: #fff;
 }
-.dark #switchButton {
-background-color: black;
-}
-.dark #switchButton .fa-sun {
-display: block;
-color: white;
-}
 
-.dark #switchButton .fa-moon {
+.dark #switchButton .gg-sun {
+  display: block;
+  color: white;
+  }
+  
+.dark #switchButton .gg-moon {
 display: none;
-}
-.dark .card {
-background-color: black;
-color: white;
 }
 
 .dark .aboutus{
@@ -368,8 +230,6 @@ color: rgba(22, 28, 45, 0.7);
 .dark .search .search__input{
 background:#fff; 
 }
-
-
 
 /*-- End dark and light mode styling --*/
 
@@ -399,12 +259,12 @@ background:#fff;
 
 /* The navigation links inside the overlay */
 .overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -415,8 +275,8 @@ background:#fff;
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  top: 1px;
-  right: 32px;
+  top: 8px;
+  right: 40px;
   font-size: 60px;
 }
 
@@ -502,5 +362,39 @@ border: 2px solid #fff;
 color: #fff;
 }
 
-
 /* END ABOUT US */
+
+/* Responsive's Toàn */
+
+
+@media screen and (max-width:1190px) {
+  .header-carousel__info h3{
+    font-size: 48px;
+    line-height: 58px;
+    }
+  }
+
+  @media (max-width: 800px){
+    .header-carousel__info h3 {
+      font-size: 40px;
+      line-height: 50px;
+  }
+  }
+
+  @media screen and (max-width:600px) {
+    .search .search__input {
+      display: none;
+      }
+      .navbar__right-content .search-bar .search .search__icon{
+        display: none;
+      }
+    }
+  
+    @media (min-width: 576px){
+      .mt-sm-5, .my-sm-5 {
+        margin-top: 3rem !important;
+    }
+    }
+    
+
+/* End Responsive's Toàn */
