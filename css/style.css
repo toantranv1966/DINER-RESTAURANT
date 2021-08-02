@@ -755,6 +755,80 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
 .dark .card__body__text h5 {
   color: black;
 }
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+    /* BANNER + HEADER */
+
+    header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)),url(../img/banner1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: initial;
+      background-attachment: fixed;
+      min-height: 700px;
+      }
+  
+      .header__navbar{
+        display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-gap: 20px;
+            padding: 40px 0 20px 0;
+            align-items: center;
+      }
+  
+    .navbar__brand h1 a.logo-brand {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        font-size: 36px;
+        font-weight: 700;
+        color: #fff;
+    }
+  
+      .navbar__right-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        align-items: center;
+      }
+  
+      .search .search__input{
+        display: flex;
+        flex: 1;
+        padding: 10px 50px 10px 20px;
+        height: 45px;
+        font-size: 16px;
+        color: #c2d0da;
+        border: none;
+        font-weight: 400;
+        border-radius: 6px;
+        position: relative;
+        right: 0;
+        background: #232220;
+        outline: 0;
+        border: 1px solid #232220;
+      }
+  
+      .navbar__right-content .search-bar .search .search__icon {
+        color: #c2d0da;
+        position: absolute;
+        right: 20px;
+        font-size: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+}
+
+    /* END BANNER + HEADER */
+
+/*-- dark and light mode styling --*/
+
 
 .card__header img {
   border-radius: 7px;
@@ -869,6 +943,7 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
   color: black;
 }
 
+
 .testimonials__detail p:last-of-type {
   color: grey;
   font-size: 20px;
@@ -884,6 +959,19 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
 .testimonials__name p:last-of-type {
   color: grey;
   font-size: 20px;
+
+#switchButton {
+background-color: transparent;
+}
+
+#switchButton .gg-sun{
+  display: none;
+}
+
+#switchButton .gg-moon{
+  color:white;
+  display: block;
+
 }
 
 .carousel-indicators li {
@@ -892,6 +980,7 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
   border-radius: 50%;
   background-color: grey;
 }
+
 
 .carousel-indicators li.active {
   background-color: #ff6600;
@@ -911,6 +1000,17 @@ footer {
   font-weight: 700;
 }
 
+
+.dark #switchButton .gg-sun {
+  display: block;
+  color: white;
+  }
+  
+.dark #switchButton .gg-moon {
+display: none;
+}
+
+
 .footer__logo p {
   color: white;
 }
@@ -927,6 +1027,7 @@ footer {
   color: black;
 }
 
+
 .footer__link ul, .footer__info ul {
   list-style: none;
 }
@@ -939,6 +1040,9 @@ footer {
 .footer__link li a:hover, .footer__info li a:hover {
   color: #ff6600;
 }
+
+/*-- End dark and light mode styling --*/
+
 
 .subscribe .btn {
   background-color: #ff6600;
@@ -963,9 +1067,20 @@ footer {
   border-radius: 5px;
 }
 
+
 .diner__social__item a {
   color: #ff6600;
   text-decoration: none;
+
+/* The navigation links inside the overlay */
+.overlay a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+
 }
 
 .diner__social__item:hover {
@@ -973,9 +1088,18 @@ footer {
   transition: 0.5s;
 }
 
+
 .diner__social__item a:hover {
   color: #fff;
   transition: 0.5s;
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 8px;
+  right: 40px;
+  font-size: 60px;
+
 }
 
 /* COPYRIGHT_Thoa */
@@ -1039,7 +1163,46 @@ footer {
   text-decoration: none;
 }
 
+
 .cd-top--is-visible {
   visibility: visible;
   opacity: 1;
 }
+
+/* END ABOUT US */
+
+/* Responsive's Toàn */
+
+
+@media screen and (max-width:1190px) {
+  .header-carousel__info h3{
+    font-size: 48px;
+    line-height: 58px;
+    }
+  }
+
+  @media (max-width: 800px){
+    .header-carousel__info h3 {
+      font-size: 40px;
+      line-height: 50px;
+  }
+  }
+
+  @media screen and (max-width:600px) {
+    .search .search__input {
+      display: none;
+      }
+      .navbar__right-content .search-bar .search .search__icon{
+        display: none;
+      }
+    }
+  
+    @media (min-width: 576px){
+      .mt-sm-5, .my-sm-5 {
+        margin-top: 3rem !important;
+    }
+    }
+    
+
+/* End Responsive's Toàn */
+
