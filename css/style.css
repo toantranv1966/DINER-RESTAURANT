@@ -346,7 +346,7 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
   }
   
   /* Position the close button (top right corner) */
-  .overlay .closebtn {
+  .overlay .close-btn {
     position: absolute;
     top: 1px;
     right: 32px;
