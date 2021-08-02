@@ -7,7 +7,7 @@ html {
   font-family: 'Quicksand', sans-serif;
 }
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --primary-color: #ff6600;
   --secondary-color: #ffc600;
   --font-color: #c2d0da;
@@ -22,7 +22,7 @@ html {
   --bg-grey: #282828;
   --card-bg: #888c96;
   --footer-bg: #000;
-}
+} */
 
 * {
     box-sizing: border-box;
@@ -297,8 +297,6 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
   .dark p{
   color: rgba(22, 28, 45, 0.7);
   }
-
-  
   
   .dark .search .search__input{
   background:#fff; 
@@ -371,7 +369,7 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
    /* ABOUT US */
   
    .aboutus{
-    /* background-color: #232220; */
+    background-color: #232220;
    }
   
    .header-title h6 {
@@ -755,7 +753,7 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
 .dark .card__body__text h5 {
   color: black;
 }
-=======
+
 * {
   margin: 0;
   padding: 0;
@@ -822,8 +820,6 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
         top: 15px;
         cursor: pointer;
     }
-
-}
 
     /* END BANNER + HEADER */
 
@@ -904,7 +900,6 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
 }
 
 
-
 /* CUSTOMERCOMMENT_Thoa */
 .testimonials__title h6 {
   font-size: 20px;
@@ -959,6 +954,7 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
 .testimonials__name p:last-of-type {
   color: grey;
   font-size: 20px;
+}
 
 #switchButton {
 background-color: transparent;
@@ -1071,6 +1067,7 @@ display: none;
 .diner__social__item a {
   color: #ff6600;
   text-decoration: none;
+}
 
 /* The navigation links inside the overlay */
 .overlay a {
@@ -1092,6 +1089,7 @@ display: none;
 .diner__social__item a:hover {
   color: #fff;
   transition: 0.5s;
+}
 
 /* Position the close button (top right corner) */
 .overlay .closebtn {
