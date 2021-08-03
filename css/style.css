@@ -371,8 +371,11 @@ header {background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% /
    .aboutus{
     background-color: #232220;
    }
-  
-   .header-title h6 {
+  .dark .aboutus{
+    background-color: #eee;
+  }
+   
+  .header-title h6 {
      font-size: 20px;
      font-weight: 400;
      line-height: 30px;
@@ -1165,6 +1168,10 @@ display: none;
 .cd-top--is-visible {
   visibility: visible;
   opacity: 1;
+}
+
+.dark footer p{
+  color: #eee;
 }
 
 /* END ABOUT US */
