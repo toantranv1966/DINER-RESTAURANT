@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Diner_Thoanb"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DINER-RESTAURANT"
+	}
+}
